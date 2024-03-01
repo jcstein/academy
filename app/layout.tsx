@@ -12,14 +12,9 @@ export const metadata: Metadata = {
   description: "Build whatever with Celestia underneath.",
 }
 
-type RootLayoutProps = {
-  children?: React.ReactNode;
-  session?: any; // Consider using a more specific type if possible
-};
-
-export default function RootLayout({ children, session = {} }: RootLayoutProps) {
+export default function RootLayout({ children }: React.PropsWithChildren<{ session: any }>) {
   return (
-    <SessionProvider session={session}>
+    <SessionProvider session={children?.props?.session ?? {}}>
       <html lang="en">
         <body className={inter.className}>
           <div className="flex flex-col justify-between w-full h-full min-h-screen">
