@@ -19,10 +19,20 @@ export default function Page() {
           <p className="pb-4">Copy your address and paste it into the <CustomLink href="https://bubs.calderaexplorer.xyz/">Bubs explorer</CustomLink> to see your balance.</p>
           <h1 className="text-3xl pb-2">Ready to write a contract</h1>
           <p className="pb-8">Now you're ready to write your first contract on Bubs testnet. Let's get started!</p>
-          <CustomLink href="/modules/1/introduction" className="px-4 py-2 bg-purple-400 text-white font-bold rounded hover:bg-purple-500 transition duration-300 ease-in-out mr-2">
+          
+          {/* <div>
+            <h2 className="text-xl font-bold pb-4">Share your progress</h2>
+            <form>
+              <label htmlFor="tweetLink" className="block mb-2 text-sm font-medium text-gray-900">Paste the link of your tweet</label>
+              <input type="url" id="tweetLink" name="tweetLink" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-purple-500 focus:border-purple-500 block w-full p-2.5 mb-4" placeholder="https://twitter.com/yourtweet" required />
+              <button type="submit" className="px-4 py-2 bg-brand text-white font-bold rounded hover:bg-brand-dark transition duration-300 ease-in-out">Submit</button>
+            </form>
+          </div> */}
+
+          <CustomLink href="/modules/1/introduction" className="px-4 py-2 bg-brand-light text-white font-bold rounded hover:bg-brand transition duration-300 ease-in-out mr-2">
             Last page
           </CustomLink>
-          <CustomLink href="/modules/1/writing-your-first-contract" className="px-4 py-2 bg-purple-600 text-white font-bold rounded hover:bg-purple-700 transition duration-300 ease-in-out">
+          <CustomLink href="/modules/1/writing-your-first-contract" className="px-4 py-2 bg-brand text-white font-bold rounded hover:bg-brand-dark transition duration-300 ease-in-out">
             Next page
           </CustomLink>
         </div>
