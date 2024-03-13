@@ -1,9 +1,15 @@
 "use client"
 import { useSession } from "next-auth/react"
 import CustomLink from "@/components/custom-link"
+import { useEffect } from "react"
 
 export default function Page() {
   const { data: session, status } = useSession()
+
+  useEffect(() => {
+    console.log(`Session status: ${status}`);
+  }, [status]);
+
   if (status === "loading") {
     return <div>Checking if you're signed in 😎...</div>;
   }
