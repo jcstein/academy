@@ -6,7 +6,9 @@ export default function Page() {
   const { data: session, status } = useSession()
   if (status === "loading") {
     return <div>Checking if you're signed in 😎...</div>;
-  } else if (status === "authenticated") {
+  }
+  
+  if (status === "authenticated") {
     return (
       <div className="space-y-2">
         <h1 className="text-4xl font-bold pb-4">Introduction to Module 1</h1>
