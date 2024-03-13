@@ -22,10 +22,10 @@ export default function Index() {
           Module 1
         </CustomLink>
       </div>
-      <h2 className="text-xl font-bold">Building a custom rollup framework</h2>
+      {/* <h2 className="text-xl font-bold">Building a custom rollup framework</h2>
       <p className="pb-4">Coming soon™</p>
       <h2 className="text-xl font-bold">Building your own RaaS setup with custom rollup framework</h2>
-      <p className="pb-4">Coming soon™</p>
+      <p className="pb-4">Coming soon™</p> */}
       <h2 className="text-xl font-bold">New module releases</h2>
       <p>Join the <a href="https://t.me/modularacademyorg" className="text-brand hover:underline">Telegram</a> for updates. This is where we'll update the community when we add new modules to Modular Academy.</p>
     </div>
