@@ -56,8 +56,8 @@ export default function Page() {
         <CustomLink href="/modules/1/writing-your-first-contract" className="px-4 py-2 bg-brand text-white font-bold rounded hover:bg-brand-dark transition duration-300 ease-in-out">
           Next page
         </CustomLink>
-        <div className="pb-4"></div>
-        <p className="border border-gray-200 p-2.5 my-2.5 bg-gray-100 rounded-md">Signed in as {session?.user?.name} ({session?.user?.email})</p>
+        {/* <div className="pb-4"></div>
+        <p className="border border-gray-200 p-2.5 my-2.5 bg-gray-100 rounded-md">Signed in as {session?.user?.name} ({session?.user?.email})</p> */}
       </div>
     )
   }
