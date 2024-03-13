@@ -1,10 +1,22 @@
 "use client"
-import { useSession } from "next-auth/react"
+import { useSession, getSession } from "next-auth/react"
 import CustomLink from "@/components/custom-link"
 import { useEffect } from "react"
 
 export default function Page() {
   const { data: session, status } = useSession()
+
+  useEffect(() => {
+    const checkSession = async () => {
+      const currentSession = await getSession();
+      console.log(currentSession);
+      if (!currentSession) {
+        console.log('No active session found.');
+      }
+    };
+
+    checkSession();
+  }, []);
 
   useEffect(() => {
     console.log(`Session status: ${status}`);
