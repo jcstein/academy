@@ -133,6 +133,12 @@ export const config = {
     // Zoho,
     // Zoom,
   ],
+  callbacks: {
+    jwt({ token, trigger, session }) {
+      if (trigger === "update") token.name = session.user.name
+      return token
+    },
+  },
 } satisfies NextAuthConfig
 
 export const { handlers, auth, signIn, signOut } = NextAuth(config)

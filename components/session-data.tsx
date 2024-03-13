@@ -3,7 +3,7 @@ import type { Session } from "next-auth"
 export default function SessionData({ session }: { session: Session | null }) {
   if (session?.user) {
     return (
-      <div className="w-full space-y-2 overflow-auto">
+      <div className="flex flex-col gap-4 w-full">
         <h2 className="text-xl font-bold">Current Session Data</h2>
         <table className="table-auto w-full">
           <tbody>

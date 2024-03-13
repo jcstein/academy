@@ -17,10 +17,10 @@ import { Button } from "./ui/button"
 
 export function MainNav() {
   return (
-    <div className="flex items-center space-x-2 lg:space-x-6">
+    <div className="flex gap-4 items-center">
       <CustomLink href="/">
         <Button variant="ghost" className="p-0">
-          <Image src="/icon-light.svg" alt="Home" width="32" height="32" />
+          <Image src="/icon-light.svg" alt="Home" width="32" height="32" className="min-w-8"/>
         </Button>
       </CustomLink>
       <NavigationMenu>
