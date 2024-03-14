@@ -47,7 +47,7 @@ export default function Page() {
       <h1 className="text-2xl pb-2">ERC-721 on a rollup</h1>
       <p className="pb-2">Deploying an ERC-721 on a rollup is very similar to deploying on Ethereum. However, the added efficiency of rollups means you can expect faster transaction finality and lower gas fees. This makes the minting process of unique tokens, such as digital art, collectibles, or tokens for real world assets, more accessible and cost-effective.</p>
       <p className="pb-2">Where's the proof? <CustomLink href="https://warpcast.com/will/0x66826dd0">Syndicate's Frame Chain</CustomLink> allows for just 0.01 ETH to cover many millions of transactions.</p>
-      <img src="/images/frame_chain.png" alt="Description of Image" className="pb-4 px-32"/>
+      <img src="/images/frame_chain.png" alt="Description of Image" className="pb-4 px-4 md:px-32"/>
       <h1 className="text-2xl pb-2">Integrating verifiable randomness</h1>
       <p className="pb-2">In the first module, we'll explore integrating a verifiable random function (VRF) with a smart contract on our rollup. VRFs provide a secure and verifiable way to generate randomness, essential for many decentralized applications. For instance, a gaming app would use a VRF to ensure fair and unpredictable outcomes.</p>
       <p className="pb-4">We'll use a drand-based VRF solution compatible with the EVM. This allows us to incorporate secure randomness directly into our smart contracts with familiar EVM opcodes.</p>
