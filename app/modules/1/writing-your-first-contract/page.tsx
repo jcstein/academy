@@ -4,37 +4,32 @@ import { useSession, getSession } from "next-auth/react";
 import CustomLink from "@/components/custom-link";
 
 export default function Page() {
-  const { data: session, status } = useSession();
-  // Assume the user is not authenticated initially
+  const { data: session } = useSession();
   const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [authCheckCompleted, setAuthCheckCompleted] = useState(false);
 
   useEffect(() => {
     const checkSession = async () => {
       const currentSession = await getSession();
-      // If there's a session, set isAuthenticated to true
       if (currentSession) {
         setIsAuthenticated(true);
+      } else {
+        setIsAuthenticated(false);
       }
-      console.log(currentSession);
-      if (!currentSession) {
-        console.log('No active session found.');
-      }
+      setAuthCheckCompleted(true);
     };
 
     checkSession();
   }, []);
 
-  // If the status is 'loading', show a loading message or similar
-  if (status === "loading") {
-    return <div>Checking if you're signed in 😎...</div>;
+  if (!authCheckCompleted) {
+    return <div>Loading and verifying authentication...</div>;
   }
 
-  // If not authenticated, show the sign-in link
   if (!isAuthenticated) {
-    return <CustomLink href="/api/auth/signin" className="underline">Sign in with GitHub to get started</CustomLink>;
+    return <div>Sign in to continue.</div>;
   }
 
-  // Content for authenticated users
   return (
     <div className="space-y-2">
         <h1 className="text-4xl font-bold pb-4">Writing your first contract</h1>

@@ -33,7 +33,7 @@ export default function SessionData({ session }: { session: Session | null }) {
 
   return (
     <p>
-      No profile data, please <em>Sign In</em> first.
+      No profile data, sign in first.
     </p>
   )
 }
