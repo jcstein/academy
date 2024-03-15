@@ -18,8 +18,11 @@ export default function Index() {
       <p>Get started with Module 1. This will show you how to create an ERC-721 smart contract on Bubs testnet with a VRF.</p>
       <p className="pb-4">Ready to ship? Sign in with GitHub in the top right and start Module 1.</p>
       <div className="pb-4">
-        <CustomLink href="/modules/1/introduction" className="px-4 py-2 bg-brand text-white font-bold rounded hover:bg-brand-dark transition duration-300 ease-in-out">
+        <CustomLink href="/modules/1/introduction" className="mr-2 px-4 py-2 bg-brand text-white font-bold rounded hover:bg-brand-dark transition duration-300 ease-in-out">
           Module 1
+        </CustomLink>
+        <CustomLink href="/test" className="px-4 py-2 bg-brand text-white font-bold rounded hover:bg-brand-dark transition duration-300 ease-in-out">
+          Test markdown page
         </CustomLink>
       </div>
       {/* <h2 className="text-xl font-bold">Building a custom rollup framework</h2>
