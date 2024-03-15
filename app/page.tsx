@@ -4,10 +4,10 @@ export default function Index() {
   return (
     <div className="space-y-2">
       <h1 className="text-3xl font-bold">Welcome to Modular Academy</h1>
-      {/* <div className="border border-gray-200 p-2.5 my-2.5 bg-gray-100 rounded-md">
+      <div className="border border-gray-200 p-2.5 my-2.5 bg-gray-100 rounded-md">
         <p className="pb-2">Modular Academy is under construction. You got here early! 👷‍♂️</p>
         <img src="https://media1.tenor.com/m/PLL_Hgq-ezsAAAAd/american-psycho-impressive.gif" alt="Impressive. Very nice." className="rounded-md"/>
-      </div> */}
+      </div>
       <h1 className="text-2xl font-bold">
         Build whatever with Celestia underneath ✨
       </h1>
