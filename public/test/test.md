@@ -17,7 +17,7 @@ This is a sample Markdown file.
 
 testing paragraph. testing paragraph. testing paragraph. testing paragraph. testing paragraph. testing paragraph. testing paragraph. testing paragraph. testing paragraph. testing paragraph. testing paragraph. testing paragraph. testing paragraph. testing paragraph. testing paragraph. testing paragraph. testing paragraph. testing paragraph. testing paragraph. testing paragraph. testing paragraph. testing paragraph. testing paragraph. testing paragraph. testing paragraph. testing paragraph. testing paragraph. testing paragraph. testing paragraph. testing paragraph. testing paragraph. testing paragraph. testing paragraph. testing paragraph. testing paragraph. testing paragraph. testing paragraph. testing paragraph. testing paragraph. testing paragraph. testing paragraph. testing paragraph. testing paragraph. testing paragraph. testing paragraph. testing paragraph. testing paragraph. testing paragraph. testing paragraph.
 
-Testing image:
+Testing image loaded from web:
 
 ![image](https://docs.celestia.org/Celestia-og.png)
 

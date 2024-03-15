@@ -1,7 +1,7 @@
 "use client"
 import MarkdownRenderer from '@/components/MarkdownRenderer';
 import { useState, useEffect } from "react";
-import { getSession } from "next-auth/react";
+import {  getSession } from "next-auth/react";
 
 export default function Page() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
