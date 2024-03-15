@@ -1,5 +1,16 @@
 import { signIn, signOut } from "auth"
 import { Button } from "./ui/button"
+import {usePlausible} from 'next-plausible'
+
+const plausible = usePlausible();
+
+const handleSignInClick = () => {
+  plausible('signIn');
+};
+
+const handleSignOutClick = () => {
+  plausible('signOut');
+};
 
 export function SignIn({
   provider,
@@ -10,6 +21,7 @@ export function SignIn({
       action={async () => {
         "use server"
         await signIn(provider)
+        handleSignInClick();
       }}
     >
       <Button {...props}>Sign In</Button>
@@ -23,6 +35,7 @@ export function SignOut(props: React.ComponentPropsWithRef<typeof Button>) {
       action={async () => {
         "use server"
         await signOut()
+        handleSignOutClick();
       }}
       className="w-full"
     >

@@ -33,7 +33,7 @@ export default function SessionData({ session }: { session: Session | null }) {
 
   return (
     <p>
-      No profile data, sign in first.
+      Sign in with GitHub to see your profile.
     </p>
   )
 }
