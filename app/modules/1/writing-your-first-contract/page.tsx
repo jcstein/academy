@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import { useSession, getSession } from "next-auth/react";
 import CustomLink from "@/components/custom-link";
+import MarkdownRenderer from '@/components/MarkdownRenderer';
 
 export default function Page() {
   const { data: session } = useSession();
@@ -32,9 +33,7 @@ export default function Page() {
 
   return (
     <div className="space-y-2">
-        <h1 className="text-4xl font-bold pb-4">Writing your first contract</h1>
-        <h1 className="text-3xl pb-2">To be continued 1</h1>
-        <p className="pb-4">gm</p>
+        <MarkdownRenderer filePath="/modules/1/writing-your-first-contract.md" />
         <CustomLink href="/modules/1/raspberry" className="px-4 py-2 bg-brand-light text-white font-bold rounded hover:bg-brand transition duration-300 ease-in-out mr-2">
           Last page
         </CustomLink>

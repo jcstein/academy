@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import { useSession, getSession } from "next-auth/react";
 import CustomLink from "@/components/custom-link";
+import MarkdownRenderer from '@/components/MarkdownRenderer';
 
 export default function Page() {
   const { data: session } = useSession();
@@ -32,18 +33,7 @@ export default function Page() {
 
   return (
     <div className="space-y-2">
-      <h1 className="text-4xl font-bold pb-4">Getting set up with Raspberry</h1>
-      <h1 className="text-3xl pb-2">Install MetaMask</h1>
-      <p className="pb-4">First, install <CustomLink href="https://metamask.io/download">download MetaMask</CustomLink> if you don't have it already.</p>
-      <h1 className="text-3xl pb-2">Add Raspberry to your wallet</h1>
-      <p className="pb-4">Now you can add Raspberry testnet as a chain in MetaMask from <CustomLink href="https://raas.gelato.network/rollups/details/public/op-celestia-testnet">the Raspberry testnet page</CustomLink>.</p>
-      <h1 className="text-3xl pb-2">Get testnet Raspberry ETH</h1>
-      <p className="pb-4">In order to deploy your first contract, you'll need some testnet ETH. You can get testnet ETH by clicking "Request Faucet Funds on Raspberry rollup" on the Raspberry testnet page. Just copy and paste your wallet address from MetaMask and request funds!</p>
-      <h1 className="text-3xl pb-2">Check the explorer for your ETH</h1>
-      <p className="pb-4">Copy your address and paste it into the <CustomLink href="https://blockscout.op-celestia-testnet.gelato.digital/">Raspberry explorer</CustomLink> to see your balance.</p>
-      <h1 className="text-3xl pb-2">Ready to write a contract</h1>
-      <p className="pb-8">Now you're ready to write your first contract on Raspberry testnet. Let's get started!</p>
-      
+      <MarkdownRenderer filePath="/modules/1/raspberry.md" />
       {/* <div>
         <h2 className="text-xl font-bold pb-4">Share your progress</h2>
         <form>
