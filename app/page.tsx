@@ -1,8 +1,14 @@
+"use client"
 import CustomLink from "@/components/custom-link"
 import {usePlausible} from 'next-plausible'
 
 export default function Index() {
-  const plausible = usePlausible()
+  const plausible = usePlausible();
+
+  const handleLinkClick = () => {
+    plausible('customEventName');
+  };
+  
   return (
     <div className="space-y-2">
       <h1 className="text-3xl font-bold">Welcome to Modular Academy</h1>
@@ -20,12 +26,18 @@ export default function Index() {
       <p>Get started with Module 1. This will show you how to create an ERC-721 smart contract on OP Celestia Raspberry testnet with a VRF.</p>
       <p className="pb-4">Ready to ship? Sign in with GitHub in the top right and start Module 1.</p>
       <div className="pb-4">
-        <CustomLink onClick={() => plausible('customEventName')} href="/modules/1/introduction" className="mr-2 px-4 py-2 bg-brand text-white font-bold rounded hover:bg-brand-dark transition duration-300 ease-in-out">
+        <CustomLink href="/modules/1/introduction" className="mr-2 px-4 py-2 bg-brand text-white font-bold rounded hover:bg-brand-dark transition duration-300 ease-in-out">
           Module 1
         </CustomLink>
-        <CustomLink onClick={() => plausible('customTestEventName')} href="/test" className="px-4 py-2 bg-brand text-white font-bold rounded hover:bg-brand-dark transition duration-300 ease-in-out">
+        <CustomLink href="/test" className="mr-2 px-4 py-2 bg-brand text-white font-bold rounded hover:bg-brand-dark transition duration-300 ease-in-out">
           Test markdown page
         </CustomLink>
+        <a href="/modules/1/introduction"  onClick={handleLinkClick} className="mr-2 px-4 py-2 bg-brand text-white font-bold rounded hover:bg-brand-dark transition duration-300 ease-in-out">
+          Test Link to Module 1
+        </a>
+        <a href="/modules/1/introduction" onClick={handleLinkClick}>
+          Click me
+        </a>
       </div>
       {/* <h2 className="text-xl font-bold">Building a custom rollup framework</h2>
       <p className="pb-4">Coming soon™</p>
