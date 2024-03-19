@@ -34,6 +34,32 @@ export default function Page() {
   };
 
   useEffect(() => {
+    const fetchUserAnswer = async () => {
+      if (!session?.user?.email) {
+        console.log('Session email is undefined. Skipping fetch for user answer.');
+        return;
+      }
+  
+      const { data, error } = await supabase
+        .from('module_progress')
+        .select('answer')
+        .eq('user_id', session.user.email)
+        .eq('module_id', 'module_1')
+        .eq('question_id', questionId)
+        .order('id', { ascending: false }); 
+  
+      if (error) {
+        console.error('Error fetching user answer:', error);
+      } else if (data && data.length > 0) {
+        console.log('User answers fetched successfully:', data);
+        setAnswer(data[0].answer); // Set the answer to the first one returned
+      }
+    };
+  
+    fetchUserAnswer();
+  }, [session, questionId]);
+
+  useEffect(() => {
     const checkSession = async () => {
       const currentSession = await getSession();
       if (currentSession) {
