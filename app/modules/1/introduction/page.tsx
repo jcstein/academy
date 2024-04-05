@@ -4,7 +4,6 @@ import { useSession, getSession } from "next-auth/react";
 import MarkdownRenderer from '@/components/MarkdownRenderer';
 import { supabase } from '@/utils/supabaseClient';
 
-
 export default function Page() {
   const [answer, setAnswer] = useState('')
   const [questionId, setQuestionId] = useState('question_1')

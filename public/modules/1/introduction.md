@@ -6,7 +6,7 @@ Welcome to the world of rollups! If you're an Ethereum Virtual Machine (EVM) dev
 
 ## What is a rollup?
 
-A rollup is blockchain that outsources one of its components to a separate chain. In this case, Raspberry testnet is an OP Stack rollup that settles on Ethereum and posts data to Celestia for data availability. Posting data to Celestia instead of as `calldata` on Ethereum allows for faster and cheaper transactions without sacrificing security. Think of a rollup as a blockchain with the superpowers of scalability and efficiency.
+A rollup is blockchain that outsources one of its components to a separate chain. In this case, Raspberry testnet is an OP Stack rollup that settles on Ethereum and posts data to Celestia for data availability. Posting data to Celestia instead of as `calldata` on Ethereum allows for faster and cheaper transactions without sacrificing security. Think of a rollup as a blockchain with the superpowers of scalability, efficiency, and verifiability by all.
 
 ## Building on Raspberry testnet
 
