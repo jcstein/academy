@@ -20,7 +20,14 @@ export function MainNav() {
     <div className="flex gap-4 items-center">
       <CustomLink href="/">
         <Button variant="ghost" className="p-0">
-          <Image src="/icon-light.svg" alt="Home" width="32" height="32" className="min-w-8"/>
+          <Image
+            src="/icon-light.svg"
+            alt="Home"
+            width="32"
+            height="32"
+            className="min-w-8"
+            unoptimized
+          />
         </Button>
       </CustomLink>
       <NavigationMenu>
