@@ -1,0 +1,46 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "modularacademy",
+  "main": ".open-next/worker.js",
+  "compatibility_date": "2026-10-23",
+  "compatibility_flags": [
+    "nodejs_compat",
+    "global_fetch_strictly_public"
+  ],
+  "upload_source_maps": true,
+  "assets": {
+    "directory": ".open-next/assets",
+    "binding": "ASSETS"
+  },
+  // Lets the Worker call itself for OpenNext cache revalidation.
+  // https://opennext.js.org/cloudflare/caching
+  "services": [
+    {
+      "binding": "WORKER_SELF_REFERENCE",
+      "service": "modularacademy"
+    }
+  ],
+  "routes": [
+    {
+      "pattern": "modularacademy.jcstein.dev",
+      "custom_domain": true
+    }
+  ],
+  // Plain runtime vars. Secrets (AUTH_SECRET, AUTH_GITHUB_ID, AUTH_GITHUB_SECRET)
+  // are set in the Cloudflare dashboard and are not stored here.
+  "vars": {
+    "AUTH_URL": "https://modularacademy.jcstein.dev",
+    "AUTH_TRUST_HOST": "true"
+  },
+  "observability": {
+    "enabled": true,
+    "logs": {
+      "enabled": true,
+      "head_sampling_rate": 1
+    },
+    "traces": {
+      "enabled": true,
+      "head_sampling_rate": 1
+    }
+  }
+}

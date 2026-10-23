@@ -66,6 +66,9 @@ import GitHub from "next-auth/providers/github"
 import type { NextAuthConfig } from "next-auth"
 
 export const config = {
+  // Cloudflare Workers does not set VERCEL or CF_PAGES, so Auth.js will not
+  // trust the request host unless this is set (or AUTH_URL / AUTH_TRUST_HOST).
+  trustHost: true,
   theme: {
     logo: "/logo-light.svg",
   },
